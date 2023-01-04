@@ -3,7 +3,7 @@
 A toy application for exploring the dynamics of the Generalized Lotka-Volterra equations. The backend is written in Java/Java Servlet and the 
 frontend is done with jsp, css and jQuery. 
 
-The architecture is a little peculiar - it is an MVC application with a controller layer that is rather *too* thin - 
+The architecture is a little peculiar - it is an MVC application with a model layer that is rather *too* thin - 
   authentication and "data access object" layers that don't seem to be doing much. 
   This is due to the fact that this application serves as a sort of "proof of concept" or "MVP" version of a
   graph dynamical systems web application of a similar flavour that I have been envisioning.
