@@ -10,4 +10,4 @@ The architecture is a little peculiar - it is an MVC application with a controll
   
 Please visit *web/about.jsp* to read a thorough description of the application and its functionality.
   
-To deploy the application, download **dist/GLV-model-dashboard.rar** and install it in the appropriate directory of a Tomcat installation.
+To deploy the application, download **dist/GLV-model-dashboard.war** and install it in the appropriate directory of a Tomcat installation.
