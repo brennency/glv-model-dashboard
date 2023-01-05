@@ -1,5 +1,4 @@
 <%@page import="abc.model.LabelGenerator" %>
-<%@page import="abc.dao.ModelDao" %>
 
 <!DOCTYPE html>
 <html>
