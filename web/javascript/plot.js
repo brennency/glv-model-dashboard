@@ -3,7 +3,7 @@ jQuery(document).ready(() => {
 
     document.getElementById("plot");
 
-    jQuery.get("/GLV-model-dashboard/Model", (data) => {
+    jQuery.get("/glv-model-dashboard/Model", (data) => {
         Plotly.newPlot(
             "plot", 
             processData(data), 
