@@ -15,7 +15,7 @@ public class AppStartListener implements ServletContextListener {
         ModelDao dao = new ModelDao();
 
         dao.createModel();
-        dao.setModelParameters(dao.sampleParams[0]);
+        dao.setModelParameters(dao.sampleParams);
         dao.model.run();
 
         servletContext.setAttribute("dao", dao);

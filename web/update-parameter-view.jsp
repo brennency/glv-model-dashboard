@@ -1,5 +1,4 @@
 <%@ page import="abc.model.LabelGenerator" %>
-<%@ page import="abc.dao.ModelDao" %>
 <%@ page import="abc.model.GeneralizedLotkaVolterra.Parameters" %>
 <%@ page import="abc.model.LinearAlgebra.*" %>
 
@@ -47,7 +46,7 @@ else {
                 <p>Number of populations:</p>
                 <select form="update-dimension-form" onchange="if(this.value != <%= updatedParamDimension %>) {this.form.submit();}"
                         name="param-dimension">
-                <% for (int dimOption = 1; dimOption <= 8; dimOption++) { %>
+                <% for (int dimOption = 2; dimOption <= 8; dimOption++) { %>
                     <% if (dimOption == updatedParamDimension) { %>
                         <option value="<%=dimOption%>" selected>
                             <%=dimOption%>

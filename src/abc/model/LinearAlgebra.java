@@ -2,11 +2,9 @@ package abc.model;
 
 import java.security.InvalidParameterException;
 
-
 public interface LinearAlgebra {
 
     public class Vector {
-
         public double[] values;
         public int dimension;
 
@@ -16,7 +14,6 @@ public interface LinearAlgebra {
         }
 
         public double dot(Vector _vector) throws InvalidParameterException {
-
             if (_vector.dimension != this.dimension) {
                 throw new InvalidParameterException("The two vectors must be of the same length.");
             }
@@ -44,14 +41,12 @@ public interface LinearAlgebra {
                 }
 
                 return new Vector(result);
-
             }
         }
     }
 
 
     public class Matrix {
-        
         public Vector[] values;
         public int[] dimension;
 
@@ -62,7 +57,6 @@ public interface LinearAlgebra {
             this.values = new Vector[colDimension];
 
             for (int rowIndex = 0; rowIndex < colDimension; rowIndex++) {
-
                 double[] row = rows[rowIndex];
 
                 if (row.length != rowDimension) {

@@ -7,7 +7,8 @@ import jakarta.servlet.annotation.WebFilter;
 
 import abc.dao.LoginDao;
 
-@WebFilter(urlPatterns = {"/home.jsp", "/Model", "/Model/*", "/Params"})
+@WebFilter(urlPatterns = 
+    {"/home.jsp", "/about.jsp", "/Model", "/Model", "/Params"})
 public class AuthFilter implements Filter {
 
     public void unauthorizedRedirect(HttpServletRequest req, HttpServletResponse res) 
@@ -16,7 +17,7 @@ public class AuthFilter implements Filter {
         HttpSession session = req.getSession();
 
         session.setAttribute("login-redirect", "Unauthorized access");
-        res.sendRedirect("index.jsp");
+        res.sendRedirect("login.jsp");
         return;
     }
 
@@ -25,6 +26,12 @@ public class AuthFilter implements Filter {
         
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
+        
+        // Disables caching for protected routes
+        res.setHeader("Pragma", "No-cache");
+        res.setHeader("Cache-control", "no-cache");
+        res.setDateHeader("Expires", 0);
+
         Cookie[] cookies = req.getCookies();
         LoginDao loginDao = new LoginDao();
         boolean isAuthorized = false;

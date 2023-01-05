@@ -6,6 +6,8 @@ public class LoginDao {
     private HashMap<String, String> users = new HashMap<String, String>();
     
     public LoginDao() {
+
+        // initialize mock user db
         users.put("username", "password");
     }
 

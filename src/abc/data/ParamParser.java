@@ -49,9 +49,7 @@ public class ParamParser {
                 // initial condition values must be positve
                 vectorValues[i] = symbol == "ic" ? Math.max(0, parsedValue) : parsedValue;
             }
-
             return new Vector(vectorValues);
-
         } 
         catch (Exception e) {
             throw new IOException("An error occurred processing vector parameters.");

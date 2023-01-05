@@ -4,7 +4,7 @@ jQuery(document).ready(() => {
     jQuery(".view-selector").click(function () {
         const classes = jQuery(this).attr('class').split(" ").filter(cl => cl != "view-selector");
         const identifier = classes.filter(cl => cl != "active")[0];
-        console.log(identifier)
+        
         if (!classes.includes("active")) {
             jQuery(".view-window.active, .view-selector.active").removeClass("active");
             jQuery(`.view-window.${identifier}, .view-selector.${identifier}`).addClass("active");

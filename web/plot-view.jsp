@@ -4,7 +4,6 @@
     <head>
         <script src="javascript/plot.js"></script>
         <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
-        <link rel="stylesheet" href="css/dataview.css">
     </head>
 
     <div class="<%="view-window plot " + defaultViewClasses.get("plot")%>">

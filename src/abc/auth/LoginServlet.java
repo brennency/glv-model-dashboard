@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
         else {
             HttpSession session = req.getSession();
             session.setAttribute("login-redirect", "Authentication Error");
-            res.sendRedirect("index.jsp");
+            res.sendRedirect("login.jsp");
         }
     }
 }
