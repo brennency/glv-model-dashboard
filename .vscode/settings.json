@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "/usr/local/apache-tomcat-10.0.27/lib/servlet-api.jar",
-        "web/WEB-INF/lib/json-simple-1.1.1.jar"
-    ]
-}
