@@ -1,22 +1,22 @@
 package abc.auth;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebFilter;
 
-import abc.dao.LoginDao;
-
 @WebFilter(urlPatterns = 
-    {"/home.jsp", "/about.jsp", "/Model", "/Model", "/Params"})
+    {"/home.jsp", "/about.jsp", "/Model", "/Params"})
 public class AuthFilter implements Filter {
 
-    public void unauthorizedRedirect(HttpServletRequest req, HttpServletResponse res) 
+    public void redirectToLogin(HttpServletRequest req, HttpServletResponse res, String message) 
         throws IOException {
 
         HttpSession session = req.getSession();
 
-        session.setAttribute("login-redirect", "Unauthorized access");
+        session.setAttribute("login-redirect", message);
         res.sendRedirect("login.jsp");
         return;
     }
@@ -26,34 +26,30 @@ public class AuthFilter implements Filter {
         
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
+        ServletContext ctx = req.getServletContext();
         
-        // Disables caching for protected routes
-        res.setHeader("Pragma", "No-cache");
-        res.setHeader("Cache-control", "no-cache");
-        res.setDateHeader("Expires", 0);
-
         Cookie[] cookies = req.getCookies();
-        LoginDao loginDao = new LoginDao();
+        ArrayList<String> userSessions = (ArrayList<String>) ctx.getAttribute("userSessions");
         boolean isAuthorized = false;
-
-        if (cookies == null) { 
-            unauthorizedRedirect(req, res);
-            return;
-        }
-
-        for (Cookie c : cookies) {
-            if ("authUser".equals(c.getName())) {
-                String username = c.getValue();
-                if (loginDao.isValidUser(username)) {
-                    isAuthorized = true;
+        
+        if (cookies != null) { 
+            for (Cookie c : cookies) {
+                if ("user".equals(c.getName())) {
+                    String userSessionId = c.getValue();
+                    isAuthorized = userSessions.contains(userSessionId);
                 }
             }
         }
-
+        
         if (isAuthorized) {
+            // Disables caching for protected routes
+            res.setHeader("Pragma", "No-cache");
+            res.setHeader("Cache-control", "no-cache");
+            res.setDateHeader("Expires", 0);
+
             chain.doFilter(request, response);
         } else {
-            unauthorizedRedirect(req, res);
+            redirectToLogin(req, res, "Please log in");
         }
     }
 }

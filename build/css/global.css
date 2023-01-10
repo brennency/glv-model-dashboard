@@ -1,0 +1,17 @@
+/* global */
+
+:root {
+    --powderBlue: #BEE9E8;
+    --maximumBlue: #62B6CB;
+    --indigoDye: #1B4965;
+    --columbiaBlue: #CAE9FF;
+    --carolinaBlue: #5FA8D3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--indigoDye);
+}

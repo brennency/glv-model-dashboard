@@ -1,0 +1,66 @@
+[33mcommit 604964528d9bf28b101ff0e16534ce0be9fb8a88[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: bd71897 1063518
+Author: Brennen Creighton-Young <brennencreightonyoung@gmail.com>
+Date:   Thu Jan 5 12:58:41 2023 -0500
+
+    Merge branch 'master' of https://github.com/brennency/glv-model-dashboard
+
+[33mcommit bd718976b9246e9edcb1b71c06928711b8217e11[m
+Author: Brennen Creighton-Young <brennencreightonyoung@gmail.com>
+Date:   Thu Jan 5 12:53:40 2023 -0500
+
+    Various clean-ups
+
+[33mcommit c565279c8c1320759ebef23088c483be8e565694[m
+Author: Brennen Creighton-Young <brennencreightonyoung@gmail.com>
+Date:   Thu Jan 5 12:51:52 2023 -0500
+
+    Cleans up parameter view
+
+[33mcommit da0e735b8f4d6b3c426b6afae72541288d02f199[m[33m ([m[1;32mupdate-branch[m[33m)[m
+Author: Brennen Creighton-Young <brennencreightonyoung@gmail.com>
+Date:   Thu Jan 5 12:49:53 2023 -0500
+
+    Adds cache control for better auth functionality. Refactors /Model/JSON route to /Model. Reworked index.jsp to reroute directly to login.jsp. Various cosmetic and documentation-related changes.
+
+[33mcommit 1063518013bc378af0b1871754b907ccd6beb6ab[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Wed Jan 4 10:33:27 2023 -0500
+
+    Update README.md
+
+[33mcommit 12f0cded414799ef923304815cd2898a74942fba[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Wed Jan 4 01:21:34 2023 -0500
+
+    Update README.md
+
+[33mcommit 95adee758ada3ceeb30383748d48b40f0f5972ef[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Wed Jan 4 01:20:49 2023 -0500
+
+    Update README.md
+
+[33mcommit feae88718e2f466d184859f44ff316c777eef3eb[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Tue Jan 3 22:59:39 2023 -0500
+
+    Update README.md
+
+[33mcommit ba4d5f2c25932647ece706e8fb5b344ca1ea62eb[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Tue Jan 3 22:55:38 2023 -0500
+
+    Update README.md
+
+[33mcommit 9030137046646bdbe925b29887ecb903fa0c574f[m
+Author: brennency <98924000+brennency@users.noreply.github.com>
+Date:   Tue Jan 3 22:54:51 2023 -0500
+
+    Create README.md
+
+[33mcommit 73dbdbde0b187b180c5e14b55085408d84cec11b[m
+Author: Brennen Creighton-Young <brennencreightonyoung@gmail.com>
+Date:   Tue Jan 3 14:48:34 2023 -0500
+
+    Tentatively complete project. Initial commit to git.

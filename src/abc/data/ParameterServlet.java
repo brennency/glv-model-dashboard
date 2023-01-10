@@ -109,7 +109,7 @@ public class ParameterServlet extends HttpServlet {
      */ 
     public void doGet(HttpServletRequest req, HttpServletResponse res) 
     throws ServletException, IOException {
-        res.sendRedirect("");
+        res.sendRedirect("home.jsp");
     }
 
     /*
